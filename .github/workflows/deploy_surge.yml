@@ -30,7 +30,7 @@ jobs:
       run: yarn build
         
     - name: Install surge globally
-      run: npm install --global surge
+      run: yarn global add surge
       
     - name: Run Surge
       run: surge ./build zee-first-react-exercise.surge.sh --token ${{ secrets.SURGE_TOKEN }}
