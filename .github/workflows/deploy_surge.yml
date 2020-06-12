@@ -28,13 +28,10 @@ jobs:
     - uses: borales/actions-yarn@v2.0.0
       with:
         cmd: build # will run `yarn build` command
-    
-    - name: Check yarn version
-      run: yarn --version
       
     - name: Install surge globally
       run: yarn global add surge
       
     - name: Run Surge
-      run: surge ./build zee-first-react-exercise.surge.sh --token ${{secrets.SURGE_TOKEN}}
+      run: surge ./build zee-first-react-exercise.surge.sh --token ${{ secrets.SURGE_TOKEN }}
     
