@@ -29,6 +29,9 @@ jobs:
       with:
         cmd: build # will run `yarn build` command
     
+    - name: Check yarn version
+      run: yarn --version
+      
     - name: Install surge globally
       run: yarn global add surge
       
